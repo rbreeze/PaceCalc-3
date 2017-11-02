@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0255FFB1FABD2D300539BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0255FFA1FABD2D300539BF0 /* AppDelegate.swift */; };
+		C0255FFD1FABD2D300539BF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0255FFC1FABD2D300539BF0 /* ViewController.swift */; };
+		C02560001FABD2D300539BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0255FFE1FABD2D300539BF0 /* Main.storyboard */; };
+		C02560021FABD2D300539BF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C02560011FABD2D300539BF0 /* Assets.xcassets */; };
+		C02560051FABD2D300539BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02560031FABD2D300539BF0 /* LaunchScreen.storyboard */; };
+		C02560101FABD2D400539BF0 /* PaceCalc_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C025600F1FABD2D400539BF0 /* PaceCalc_3Tests.swift */; };
+		C025601B1FABD2D400539BF0 /* PaceCalc_3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C025601A1FABD2D400539BF0 /* PaceCalc_3UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C025600C1FABD2D400539BF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0255FEF1FABD2D300539BF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0255FF61FABD2D300539BF0;
+			remoteInfo = "PaceCalc 3";
+		};
+		C02560171FABD2D400539BF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0255FEF1FABD2D300539BF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0255FF61FABD2D300539BF0;
+			remoteInfo = "PaceCalc 3";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C0255FF71FABD2D300539BF0 /* PaceCalc 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PaceCalc 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0255FFA1FABD2D300539BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C0255FFC1FABD2D300539BF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C0255FFF1FABD2D300539BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C02560011FABD2D300539BF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C02560041FABD2D300539BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C02560061FABD2D300539BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C025600B1FABD2D400539BF0 /* PaceCalc 3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PaceCalc 3Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C025600F1FABD2D400539BF0 /* PaceCalc_3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceCalc_3Tests.swift; sourceTree = "<group>"; };
+		C02560111FABD2D400539BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C02560161FABD2D400539BF0 /* PaceCalc 3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PaceCalc 3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C025601A1FABD2D400539BF0 /* PaceCalc_3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceCalc_3UITests.swift; sourceTree = "<group>"; };
+		C025601C1FABD2D400539BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0255FF41FABD2D300539BF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C02560081FABD2D400539BF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C02560131FABD2D400539BF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C0255FEE1FABD2D300539BF0 = {
+			isa = PBXGroup;
+			children = (
+				C0255FF91FABD2D300539BF0 /* PaceCalc 3 */,
+				C025600E1FABD2D400539BF0 /* PaceCalc 3Tests */,
+				C02560191FABD2D400539BF0 /* PaceCalc 3UITests */,
+				C0255FF81FABD2D300539BF0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0255FF81FABD2D300539BF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0255FF71FABD2D300539BF0 /* PaceCalc 3.app */,
+				C025600B1FABD2D400539BF0 /* PaceCalc 3Tests.xctest */,
+				C02560161FABD2D400539BF0 /* PaceCalc 3UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0255FF91FABD2D300539BF0 /* PaceCalc 3 */ = {
+			isa = PBXGroup;
+			children = (
+				C0255FFA1FABD2D300539BF0 /* AppDelegate.swift */,
+				C0255FFC1FABD2D300539BF0 /* ViewController.swift */,
+				C0255FFE1FABD2D300539BF0 /* Main.storyboard */,
+				C02560011FABD2D300539BF0 /* Assets.xcassets */,
+				C02560031FABD2D300539BF0 /* LaunchScreen.storyboard */,
+				C02560061FABD2D300539BF0 /* Info.plist */,
+			);
+			path = "PaceCalc 3";
+			sourceTree = "<group>";
+		};
+		C025600E1FABD2D400539BF0 /* PaceCalc 3Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C025600F1FABD2D400539BF0 /* PaceCalc_3Tests.swift */,
+				C02560111FABD2D400539BF0 /* Info.plist */,
+			);
+			path = "PaceCalc 3Tests";
+			sourceTree = "<group>";
+		};
+		C02560191FABD2D400539BF0 /* PaceCalc 3UITests */ = {
+			isa = PBXGroup;
+			children = (
+				C025601A1FABD2D400539BF0 /* PaceCalc_3UITests.swift */,
+				C025601C1FABD2D400539BF0 /* Info.plist */,
+			);
+			path = "PaceCalc 3UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C0255FF61FABD2D300539BF0 /* PaceCalc 3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C025601F1FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "PaceCalc 3" */;
+			buildPhases = (
+				C0255FF31FABD2D300539BF0 /* Sources */,
+				C0255FF41FABD2D300539BF0 /* Frameworks */,
+				C0255FF51FABD2D300539BF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PaceCalc 3";
+			productName = "PaceCalc 3";
+			productReference = C0255FF71FABD2D300539BF0 /* PaceCalc 3.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C025600A1FABD2D400539BF0 /* PaceCalc 3Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C02560221FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "PaceCalc 3Tests" */;
+			buildPhases = (
+				C02560071FABD2D400539BF0 /* Sources */,
+				C02560081FABD2D400539BF0 /* Frameworks */,
+				C02560091FABD2D400539BF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C025600D1FABD2D400539BF0 /* PBXTargetDependency */,
+			);
+			name = "PaceCalc 3Tests";
+			productName = "PaceCalc 3Tests";
+			productReference = C025600B1FABD2D400539BF0 /* PaceCalc 3Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C02560151FABD2D400539BF0 /* PaceCalc 3UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C02560251FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "PaceCalc 3UITests" */;
+			buildPhases = (
+				C02560121FABD2D400539BF0 /* Sources */,
+				C02560131FABD2D400539BF0 /* Frameworks */,
+				C02560141FABD2D400539BF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C02560181FABD2D400539BF0 /* PBXTargetDependency */,
+			);
+			name = "PaceCalc 3UITests";
+			productName = "PaceCalc 3UITests";
+			productReference = C02560161FABD2D400539BF0 /* PaceCalc 3UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0255FEF1FABD2D300539BF0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Remington Breeze";
+				TargetAttributes = {
+					C0255FF61FABD2D300539BF0 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = KM8U86WZN8;
+						ProvisioningStyle = Automatic;
+					};
+					C025600A1FABD2D400539BF0 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = KM8U86WZN8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C0255FF61FABD2D300539BF0;
+					};
+					C02560151FABD2D400539BF0 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = KM8U86WZN8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C0255FF61FABD2D300539BF0;
+					};
+				};
+			};
+			buildConfigurationList = C0255FF21FABD2D300539BF0 /* Build configuration list for PBXProject "PaceCalc 3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C0255FEE1FABD2D300539BF0;
+			productRefGroup = C0255FF81FABD2D300539BF0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0255FF61FABD2D300539BF0 /* PaceCalc 3 */,
+				C025600A1FABD2D400539BF0 /* PaceCalc 3Tests */,
+				C02560151FABD2D400539BF0 /* PaceCalc 3UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0255FF51FABD2D300539BF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02560051FABD2D300539BF0 /* LaunchScreen.storyboard in Resources */,
+				C02560021FABD2D300539BF0 /* Assets.xcassets in Resources */,
+				C02560001FABD2D300539BF0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C02560091FABD2D400539BF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C02560141FABD2D400539BF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C0255FF31FABD2D300539BF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0255FFD1FABD2D300539BF0 /* ViewController.swift in Sources */,
+				C0255FFB1FABD2D300539BF0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C02560071FABD2D400539BF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02560101FABD2D400539BF0 /* PaceCalc_3Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C02560121FABD2D400539BF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C025601B1FABD2D400539BF0 /* PaceCalc_3UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C025600D1FABD2D400539BF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0255FF61FABD2D300539BF0 /* PaceCalc 3 */;
+			targetProxy = C025600C1FABD2D400539BF0 /* PBXContainerItemProxy */;
+		};
+		C02560181FABD2D400539BF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0255FF61FABD2D300539BF0 /* PaceCalc 3 */;
+			targetProxy = C02560171FABD2D400539BF0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C0255FFE1FABD2D300539BF0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0255FFF1FABD2D300539BF0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C02560031FABD2D300539BF0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C02560041FABD2D300539BF0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C025601D1FABD2D400539BF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C025601E1FABD2D400539BF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C02560201FABD2D400539BF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KM8U86WZN8;
+				INFOPLIST_FILE = "PaceCalc 3/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "remington.breeze.apps.PaceCalc-3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C02560211FABD2D400539BF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KM8U86WZN8;
+				INFOPLIST_FILE = "PaceCalc 3/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "remington.breeze.apps.PaceCalc-3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C02560231FABD2D400539BF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KM8U86WZN8;
+				INFOPLIST_FILE = "PaceCalc 3Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "remington.breeze.apps.PaceCalc-3Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaceCalc 3.app/PaceCalc 3";
+			};
+			name = Debug;
+		};
+		C02560241FABD2D400539BF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KM8U86WZN8;
+				INFOPLIST_FILE = "PaceCalc 3Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "remington.breeze.apps.PaceCalc-3Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaceCalc 3.app/PaceCalc 3";
+			};
+			name = Release;
+		};
+		C02560261FABD2D400539BF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = KM8U86WZN8;
+				INFOPLIST_FILE = "PaceCalc 3UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "remington.breeze.apps.PaceCalc-3UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "PaceCalc 3";
+			};
+			name = Debug;
+		};
+		C02560271FABD2D400539BF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = KM8U86WZN8;
+				INFOPLIST_FILE = "PaceCalc 3UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "remington.breeze.apps.PaceCalc-3UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "PaceCalc 3";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0255FF21FABD2D300539BF0 /* Build configuration list for PBXProject "PaceCalc 3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C025601D1FABD2D400539BF0 /* Debug */,
+				C025601E1FABD2D400539BF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C025601F1FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "PaceCalc 3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C02560201FABD2D400539BF0 /* Debug */,
+				C02560211FABD2D400539BF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C02560221FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "PaceCalc 3Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C02560231FABD2D400539BF0 /* Debug */,
+				C02560241FABD2D400539BF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C02560251FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "PaceCalc 3UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C02560261FABD2D400539BF0 /* Debug */,
+				C02560271FABD2D400539BF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C0255FEF1FABD2D300539BF0 /* Project object */;
+}
