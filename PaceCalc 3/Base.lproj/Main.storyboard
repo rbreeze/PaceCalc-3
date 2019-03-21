@@ -1,26 +1,534 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PaceCalc_3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8g-TL-SZC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="342"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="197" id="4JP-hM-Kdp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yig-5F-N3y">
+                                <rect key="frame" x="16" y="307" width="57" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="BF8-bl-oBD"/>
+                                    <constraint firstAttribute="width" constant="57" id="nrh-hC-nf1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.79681919642857146" green="0.79681919642857146" blue="0.79681919642857146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7PP-Yf-o73">
+                                <rect key="frame" x="137" y="307" width="57" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="a5b-uD-08L"/>
+                                    <constraint firstAttribute="width" constant="57" id="zKH-lE-BgH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.79681919642857146" green="0.79681919642857146" blue="0.79681919642857146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3J-zE-U4u">
+                                <rect key="frame" x="16" y="280" width="57" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="AOL-C0-mA3"/>
+                                    <constraint firstAttribute="width" constant="57" id="Ifr-WG-zYV"/>
+                                    <constraint firstAttribute="height" constant="24" id="oC0-Jy-NEI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.79681919642857146" green="0.79681919642857146" blue="0.79681919642857146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEY-wK-lte">
+                                <rect key="frame" x="81" y="280" width="65" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="msc-s5-keI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.40785216348511832" blue="0.52631148505054659" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kgb-j5-wy3">
+                                <rect key="frame" x="0.0" y="342" width="375" height="470"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gNm-tz-IjF">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQh-eB-kT9" customClass="BrownCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="94"/>
+                                                <color key="backgroundColor" red="0.96078431372549022" green="0.93333333333333335" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="C">
+                                                    <color key="titleColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clearDisplay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lNh-5q-CqL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7x-Hj-gd9" customClass="BrownCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="93.666666666666686" y="0.0" width="94" height="94"/>
+                                                <color key="backgroundColor" red="0.96078431372549022" green="0.93333333333333335" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="AC">
+                                                    <color key="titleColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clearAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="You-Un-tyG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luO-VG-3CX" customClass="BrownCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="187.66666666666666" y="0.0" width="93.666666666666657" height="94"/>
+                                                <color key="backgroundColor" red="0.96078431372549022" green="0.93333333333333335" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="31"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="ALT">
+                                                    <color key="titleColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="altTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4kC-Mz-Ecx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJX-oZ-TFs" customClass="OrangeCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="281.33333333333331" y="0.0" width="93.666666666666686" height="94"/>
+                                                <color key="backgroundColor" red="1" green="0.43137254901960786" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <state key="normal" title="UNIT">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="toggleMode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ayH-T6-9ne"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gNm-tz-IjF" secondAttribute="height" multiplier="375:94" id="TQv-fM-vRM"/>
+                                            <constraint firstAttribute="width" secondItem="gNm-tz-IjF" secondAttribute="height" multiplier="375:94" id="jIK-f6-s5Q"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="x5w-Vz-iS2">
+                                        <rect key="frame" x="0.0" y="94" width="375" height="94"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKu-sS-uor" customClass="NumCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="94"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8QX-al-pSn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoA-US-ag3" customClass="NumCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="93.666666666666686" y="0.0" width="94" height="94"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" red="0.23418844098571426" green="0.23418844098571426" blue="0.23418844098571426" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kOJ-Yb-WTn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqJ-ef-wAt" customClass="NumCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="187.66666666666666" y="0.0" width="93.666666666666657" height="94"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" red="0.23418844098571426" green="0.23418844098571426" blue="0.23418844098571426" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V4f-ea-k71"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="84K-s1-axM" customClass="PinkCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="281.33333333333331" y="0.0" width="93.666666666666686" height="94"/>
+                                                <color key="backgroundColor" red="1" green="0.30196078431372547" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="SPLIT">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="splitButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e6o-0m-CYp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="x5w-Vz-iS2" secondAttribute="height" multiplier="375:94" id="0QY-LK-ZaY"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="w8D-tI-BnB">
+                                        <rect key="frame" x="0.0" y="188" width="375" height="94"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dV2-RM-pDP" customClass="NumCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="94"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" red="0.23418844098571426" green="0.23418844098571426" blue="0.23418844098571426" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y2K-el-2jv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpM-LB-zPp" customClass="NumCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="93.666666666666686" y="0.0" width="94" height="94"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" red="0.23418844098571426" green="0.23418844098571426" blue="0.23418844098571426" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U5E-Iv-bgz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-Sc-4Pf" customClass="NumCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="187.66666666666666" y="0.0" width="93.666666666666657" height="94"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" red="0.23418844098571426" green="0.23418844098571426" blue="0.23418844098571426" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nz1-AI-BuD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Cx0-Wl-Kac" customClass="PinkCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="281.33333333333331" y="0.0" width="93.666666666666686" height="94"/>
+                                                <color key="backgroundColor" red="1" green="0.30196078431372547" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="TIME">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="functionTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XDE-EB-ozE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="w8D-tI-BnB" secondAttribute="height" multiplier="375:94" id="Dut-Ql-egK"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Glp-Dp-oDB">
+                                        <rect key="frame" x="0.0" y="282" width="375" height="94"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmz-2t-ukl" customClass="NumCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="94"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" red="0.23418844098571426" green="0.23418844098571426" blue="0.23418844098571426" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XqN-eg-ZBV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D27-H7-F2b" customClass="NumCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="93.666666666666686" y="0.0" width="94" height="94"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" red="0.23418844098571426" green="0.23418844098571426" blue="0.23418844098571426" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qjt-ce-pvx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRs-gO-uvm" customClass="NumCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="187.66666666666666" y="0.0" width="93.666666666666657" height="94"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" red="0.23418844098571426" green="0.23418844098571426" blue="0.23418844098571426" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RHH-b3-HG1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTd-8t-J5y" customClass="PinkCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="281.33333333333331" y="0.0" width="93.666666666666686" height="94"/>
+                                                <color key="backgroundColor" red="0.78823529411764703" green="0.23921568627450979" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="DIST">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="functionTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOn-uw-cXM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Glp-Dp-oDB" secondAttribute="height" multiplier="375:94" id="iWU-51-B50"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="be3-Y3-4dc">
+                                        <rect key="frame" x="0.0" y="376" width="375" height="94"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtP-fa-Qsb" customClass="BrownCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="94"/>
+                                                <color key="backgroundColor" red="0.96078431372549022" green="0.93333333333333335" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="MORE">
+                                                    <color key="titleColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdz-IQ-mRS" customClass="NumCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="93.666666666666686" y="0.0" width="94" height="94"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" red="0.23418844098571426" green="0.23418844098571426" blue="0.23418844098571426" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nn0-Sa-70b"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhC-4g-NBG" customClass="BrownCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="187.66666666666666" y="0.0" width="93.666666666666657" height="94"/>
+                                                <color key="backgroundColor" red="0.96078431372549022" green="0.93333333333333335" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title=".">
+                                                    <color key="titleColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="seperatorTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0p7-7j-Poe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mP9-jV-bbl" customClass="PinkCalcButton" customModule="PaceCalc_3" customModuleProvider="target">
+                                                <rect key="frame" x="281.33333333333331" y="0.0" width="93.666666666666686" height="94"/>
+                                                <color key="backgroundColor" red="1" green="0.30196078431372547" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="PACE">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="functionTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bX2-sU-jAJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="be3-Y3-4dc" secondAttribute="height" multiplier="375:94" id="MZ1-eL-hzD"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="x5w-Vz-iS2" firstAttribute="height" secondItem="gNm-tz-IjF" secondAttribute="height" id="35e-CO-C5p"/>
+                                    <constraint firstItem="be3-Y3-4dc" firstAttribute="height" secondItem="gNm-tz-IjF" secondAttribute="height" id="DYp-ux-Jpn"/>
+                                    <constraint firstItem="w8D-tI-BnB" firstAttribute="height" secondItem="gNm-tz-IjF" secondAttribute="height" id="ehU-Yg-sdw"/>
+                                    <constraint firstItem="Glp-Dp-oDB" firstAttribute="height" secondItem="gNm-tz-IjF" secondAttribute="height" id="l9M-eG-y43"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oU-2B-RR7">
+                                <rect key="frame" x="81" y="307" width="60" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.40785216348511832" blue="0.52631148505054659" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcI-9z-D6e">
+                                <rect key="frame" x="198" y="307" width="31.666666666666657" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.40785216348511832" blue="0.52631148505054659" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MI" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84R-hT-5cb">
+                                <rect key="frame" x="217" y="265" width="142" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MILES" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gK5-Hn-3Go">
+                                <rect key="frame" x="257" y="307" width="102" height="21.666666666666686"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.54038123390236481" blue="0.43125446949686319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvA-b7-3LN">
+                                <rect key="frame" x="257.33333333333331" y="173.33333333333334" width="101.66666666666669" height="83.666666666666657"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPLIT MODE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cne-dY-1e7">
+                                <rect key="frame" x="16" y="194" width="107" height="18"/>
+                                <color key="backgroundColor" red="0.87647879464285716" green="0.26466222426470593" blue="0.3849632352941168" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="107" id="iDk-J2-Hc0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="84R-hT-5cb" firstAttribute="top" secondItem="LvA-b7-3LN" secondAttribute="bottom" constant="8" id="2ln-yk-FkR"/>
+                            <constraint firstItem="c3J-zE-U4u" firstAttribute="leading" secondItem="yig-5F-N3y" secondAttribute="leading" id="5Yc-B8-TTP"/>
+                            <constraint firstItem="7PP-Yf-o73" firstAttribute="leading" secondItem="yig-5F-N3y" secondAttribute="trailing" constant="64" id="5g8-nN-4LR"/>
+                            <constraint firstItem="84R-hT-5cb" firstAttribute="trailing" secondItem="LvA-b7-3LN" secondAttribute="trailing" id="8Wb-jE-KO9"/>
+                            <constraint firstItem="84R-hT-5cb" firstAttribute="leading" secondItem="MEY-wK-lte" secondAttribute="trailing" constant="71" id="AkA-DP-Hs5"/>
+                            <constraint firstItem="c3J-zE-U4u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Bym-g0-ocd"/>
+                            <constraint firstItem="yig-5F-N3y" firstAttribute="baseline" secondItem="5oU-2B-RR7" secondAttribute="baseline" id="DiE-Lv-AAW"/>
+                            <constraint firstItem="MEY-wK-lte" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="65" id="EiP-VV-N9p"/>
+                            <constraint firstItem="M8g-TL-SZC" firstAttribute="leading" secondItem="cne-dY-1e7" secondAttribute="trailing" constant="-123" id="Fzs-CN-VlS"/>
+                            <constraint firstItem="7PP-Yf-o73" firstAttribute="baseline" secondItem="5oU-2B-RR7" secondAttribute="baseline" id="IXK-bT-6Qg"/>
+                            <constraint firstItem="M8g-TL-SZC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="J8R-dd-Dsn"/>
+                            <constraint firstItem="5oU-2B-RR7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="65" id="NRV-zL-zbR"/>
+                            <constraint firstItem="M8g-TL-SZC" firstAttribute="trailing" secondItem="kgb-j5-wy3" secondAttribute="trailing" id="PEs-kg-IAM"/>
+                            <constraint firstItem="gK5-Hn-3Go" firstAttribute="top" secondItem="84R-hT-5cb" secondAttribute="bottom" constant="18" id="SZG-bo-O5F"/>
+                            <constraint firstItem="c3J-zE-U4u" firstAttribute="trailing" secondItem="yig-5F-N3y" secondAttribute="trailing" id="Sio-H7-AeO"/>
+                            <constraint firstItem="7PP-Yf-o73" firstAttribute="leading" secondItem="5oU-2B-RR7" secondAttribute="trailing" constant="-4" id="V4z-EY-mTJ"/>
+                            <constraint firstItem="BcI-9z-D6e" firstAttribute="leading" secondItem="5oU-2B-RR7" secondAttribute="trailing" constant="57" id="Ywq-R8-Wcn"/>
+                            <constraint firstItem="7PP-Yf-o73" firstAttribute="baseline" secondItem="BcI-9z-D6e" secondAttribute="baseline" id="aWy-nH-74O"/>
+                            <constraint firstItem="kgb-j5-wy3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bRK-fC-Ev4"/>
+                            <constraint firstItem="gK5-Hn-3Go" firstAttribute="leading" secondItem="M8g-TL-SZC" secondAttribute="trailing" constant="-118" id="bZW-zu-YOz"/>
+                            <constraint firstAttribute="trailing" secondItem="gNm-tz-IjF" secondAttribute="trailing" id="c5O-p2-D6d"/>
+                            <constraint firstItem="yig-5F-N3y" firstAttribute="top" secondItem="MEY-wK-lte" secondAttribute="bottom" constant="3" id="dhM-IP-9vb"/>
+                            <constraint firstItem="kgb-j5-wy3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hz2-I9-reV"/>
+                            <constraint firstAttribute="bottom" secondItem="kgb-j5-wy3" secondAttribute="bottom" id="kd5-vP-41H"/>
+                            <constraint firstItem="kgb-j5-wy3" firstAttribute="top" secondItem="yig-5F-N3y" secondAttribute="bottom" constant="11" id="oXi-Vx-Edy"/>
+                            <constraint firstItem="M8g-TL-SZC" firstAttribute="leading" secondItem="kgb-j5-wy3" secondAttribute="leading" id="oXs-Of-hqc"/>
+                            <constraint firstAttribute="trailing" secondItem="kgb-j5-wy3" secondAttribute="trailing" id="p3h-Uq-C4R"/>
+                            <constraint firstItem="gK5-Hn-3Go" firstAttribute="trailing" secondItem="LvA-b7-3LN" secondAttribute="trailing" id="pew-VN-Zq4"/>
+                            <constraint firstItem="c3J-zE-U4u" firstAttribute="baseline" secondItem="MEY-wK-lte" secondAttribute="baseline" id="qGq-yx-dMn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="84R-hT-5cb" secondAttribute="trailing" id="w1E-Lu-hL6"/>
+                            <constraint firstItem="c3J-zE-U4u" firstAttribute="top" secondItem="cne-dY-1e7" secondAttribute="bottom" constant="68" id="y5V-GA-tdw"/>
+                            <constraint firstItem="kgb-j5-wy3" firstAttribute="top" secondItem="M8g-TL-SZC" secondAttribute="bottom" id="zOm-pb-9xf"/>
+                            <constraint firstItem="gK5-Hn-3Go" firstAttribute="top" secondItem="M8g-TL-SZC" secondAttribute="bottom" constant="-35" id="zeX-JP-kis"/>
+                        </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="altButton" destination="luO-VG-3CX" id="azf-UH-QTM"/>
+                        <outlet property="calculatorDisplay" destination="LvA-b7-3LN" id="soB-lr-CPJ"/>
+                        <outlet property="distanceButton" destination="pTd-8t-J5y" id="id1-Yx-FXF"/>
+                        <outlet property="distanceLabel" destination="BcI-9z-D6e" id="RUS-yq-CHB"/>
+                        <outlet property="paceButton" destination="mP9-jV-bbl" id="2Rs-8X-L72"/>
+                        <outlet property="paceLabel" destination="MEY-wK-lte" id="ra4-L3-WTx"/>
+                        <outlet property="seperatorButton" destination="KhC-4g-NBG" id="SuN-1V-0fx"/>
+                        <outlet property="splitButton" destination="84K-s1-axM" id="yBE-ka-DMq"/>
+                        <outlet property="splitModeIndicator" destination="cne-dY-1e7" id="zV7-oB-ZFH"/>
+                        <outlet property="staticDistanceLabel" destination="7PP-Yf-o73" id="RKa-Zl-6AU"/>
+                        <outlet property="staticPaceLabel" destination="c3J-zE-U4u" id="yTJ-Hc-eyR"/>
+                        <outlet property="staticTimeLabel" destination="yig-5F-N3y" id="4eg-aS-3Vw"/>
+                        <outlet property="timeButton" destination="Cx0-Wl-Kac" id="p7h-D6-uxi"/>
+                        <outlet property="timeLabel" destination="5oU-2B-RR7" id="lJT-ms-XJy"/>
+                        <outlet property="unitLabel" destination="84R-hT-5cb" id="1Dt-Vk-Axd"/>
+                        <outlet property="unitModeLabel" destination="gK5-Hn-3Go" id="Spi-mW-nhJ"/>
+                        <outletCollection property="functionButtons" destination="Cx0-Wl-Kac" collectionClass="NSMutableArray" id="UMT-Ev-XBY"/>
+                        <outletCollection property="functionButtons" destination="pTd-8t-J5y" collectionClass="NSMutableArray" id="Yk3-wg-TTG"/>
+                        <outletCollection property="functionButtons" destination="mP9-jV-bbl" collectionClass="NSMutableArray" id="nUn-MB-qhz"/>
+                        <outletCollection property="numButtons" destination="KKu-sS-uor" collectionClass="NSMutableArray" id="u7l-OA-Kwk"/>
+                        <outletCollection property="numButtons" destination="SoA-US-ag3" collectionClass="NSMutableArray" id="fZb-eK-2JR"/>
+                        <outletCollection property="numButtons" destination="MqJ-ef-wAt" collectionClass="NSMutableArray" id="ur3-Z8-BCJ"/>
+                        <outletCollection property="numButtons" destination="dV2-RM-pDP" collectionClass="NSMutableArray" id="7Jd-oV-Evv"/>
+                        <outletCollection property="numButtons" destination="DpM-LB-zPp" collectionClass="NSMutableArray" id="Xoj-RR-vOc"/>
+                        <outletCollection property="numButtons" destination="3AV-Sc-4Pf" collectionClass="NSMutableArray" id="Q94-NT-B3U"/>
+                        <outletCollection property="numButtons" destination="pmz-2t-ukl" collectionClass="NSMutableArray" id="Ppt-DW-8L0"/>
+                        <outletCollection property="numButtons" destination="D27-H7-F2b" collectionClass="NSMutableArray" id="WJQ-jg-J2l"/>
+                        <outletCollection property="numButtons" destination="aRs-gO-uvm" collectionClass="NSMutableArray" id="XSm-7C-77i"/>
+                        <outletCollection property="numButtons" destination="Rdz-IQ-mRS" collectionClass="NSMutableArray" id="Fey-M6-dgA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="103.44827586206897"/>
         </scene>
     </scenes>
 </document>

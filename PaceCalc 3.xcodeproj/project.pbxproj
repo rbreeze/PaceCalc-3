@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0204D5C1FAFACC800C20307 /* CalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0204D5B1FAFACC800C20307 /* CalcButton.swift */; };
 		C0255FFB1FABD2D300539BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0255FFA1FABD2D300539BF0 /* AppDelegate.swift */; };
 		C0255FFD1FABD2D300539BF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0255FFC1FABD2D300539BF0 /* ViewController.swift */; };
 		C02560001FABD2D300539BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0255FFE1FABD2D300539BF0 /* Main.storyboard */; };
@@ -14,6 +15,11 @@
 		C02560051FABD2D300539BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02560031FABD2D300539BF0 /* LaunchScreen.storyboard */; };
 		C02560101FABD2D400539BF0 /* PaceCalc_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C025600F1FABD2D400539BF0 /* PaceCalc_3Tests.swift */; };
 		C025601B1FABD2D400539BF0 /* PaceCalc_3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C025601A1FABD2D400539BF0 /* PaceCalc_3UITests.swift */; };
+		C02560291FABD93C00539BF0 /* PinkCalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02560281FABD93C00539BF0 /* PinkCalcButton.swift */; };
+		C025602B1FAC097A00539BF0 /* NumCalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C025602A1FAC097A00539BF0 /* NumCalcButton.swift */; };
+		C025602D1FAC098500539BF0 /* BrownCalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C025602C1FAC098500539BF0 /* BrownCalcButton.swift */; };
+		C025602F1FAC0A8200539BF0 /* OrangeCalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C025602E1FAC0A8200539BF0 /* OrangeCalcButton.swift */; };
+		C02560311FACF36700539BF0 /* PaceBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02560301FACF36700539BF0 /* PaceBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C0204D5B1FAFACC800C20307 /* CalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButton.swift; sourceTree = "<group>"; };
 		C0255FF71FABD2D300539BF0 /* PaceCalc 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PaceCalc 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0255FFA1FABD2D300539BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0255FFC1FABD2D300539BF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,11 @@
 		C02560161FABD2D400539BF0 /* PaceCalc 3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PaceCalc 3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C025601A1FABD2D400539BF0 /* PaceCalc_3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceCalc_3UITests.swift; sourceTree = "<group>"; };
 		C025601C1FABD2D400539BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C02560281FABD93C00539BF0 /* PinkCalcButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinkCalcButton.swift; sourceTree = "<group>"; };
+		C025602A1FAC097A00539BF0 /* NumCalcButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumCalcButton.swift; sourceTree = "<group>"; };
+		C025602C1FAC098500539BF0 /* BrownCalcButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrownCalcButton.swift; sourceTree = "<group>"; };
+		C025602E1FAC0A8200539BF0 /* OrangeCalcButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrangeCalcButton.swift; sourceTree = "<group>"; };
+		C02560301FACF36700539BF0 /* PaceBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaceBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +111,13 @@
 			children = (
 				C0255FFA1FABD2D300539BF0 /* AppDelegate.swift */,
 				C0255FFC1FABD2D300539BF0 /* ViewController.swift */,
+				C02560301FACF36700539BF0 /* PaceBrain.swift */,
+				C02560281FABD93C00539BF0 /* PinkCalcButton.swift */,
+				C025602A1FAC097A00539BF0 /* NumCalcButton.swift */,
 				C0255FFE1FABD2D300539BF0 /* Main.storyboard */,
+				C025602C1FAC098500539BF0 /* BrownCalcButton.swift */,
+				C025602E1FAC0A8200539BF0 /* OrangeCalcButton.swift */,
+				C0204D5B1FAFACC800C20307 /* CalcButton.swift */,
 				C02560011FABD2D300539BF0 /* Assets.xcassets */,
 				C02560031FABD2D300539BF0 /* LaunchScreen.storyboard */,
 				C02560061FABD2D300539BF0 /* Info.plist */,
@@ -194,6 +212,7 @@
 					C0255FF61FABD2D300539BF0 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = KM8U86WZN8;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					C025600A1FABD2D400539BF0 = {
@@ -215,6 +234,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -262,8 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C025602F1FAC0A8200539BF0 /* OrangeCalcButton.swift in Sources */,
 				C0255FFD1FABD2D300539BF0 /* ViewController.swift in Sources */,
+				C0204D5C1FAFACC800C20307 /* CalcButton.swift in Sources */,
+				C025602B1FAC097A00539BF0 /* NumCalcButton.swift in Sources */,
+				C02560291FABD93C00539BF0 /* PinkCalcButton.swift in Sources */,
+				C02560311FACF36700539BF0 /* PaceBrain.swift in Sources */,
 				C0255FFB1FABD2D300539BF0 /* AppDelegate.swift in Sources */,
+				C025602D1FAC098500539BF0 /* BrownCalcButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,10 +441,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KM8U86WZN8;
 				INFOPLIST_FILE = "PaceCalc 3/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "remington.breeze.apps.PaceCalc-3";
+				PRODUCT_BUNDLE_IDENTIFIER = "remington.breeze.apps.PaceCalc-3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -428,10 +456,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KM8U86WZN8;
 				INFOPLIST_FILE = "PaceCalc 3/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "remington.breeze.apps.PaceCalc-3";
+				PRODUCT_BUNDLE_IDENTIFIER = "remington.breeze.apps.PaceCalc-3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -512,6 +542,7 @@
 				C02560211FABD2D400539BF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C02560221FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "PaceCalc 3Tests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +551,7 @@
 				C02560241FABD2D400539BF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C02560251FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "PaceCalc 3UITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +560,7 @@
 				C02560271FABD2D400539BF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
