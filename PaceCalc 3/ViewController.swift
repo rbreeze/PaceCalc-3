@@ -289,6 +289,14 @@ class ViewController: UIViewController {
             return
         } else {
             laps.append(counter)
+            var lapTime: Double
+            if (laps.count > 1) {
+                lapTime = counter - laps[laps.count - 2]
+            } else {
+                lapTime = counter
+            }
+            print(lapTime)
+            projectedLabel.text = brain.getProjection(calcInput.data["LapDistance"] as! Double, lapTime: lapTime, projectedDistance: calcInput.data["ProjectedDistance"] as! Double)
             updateNumLaps()
             return
         }
@@ -523,8 +531,6 @@ class ViewController: UIViewController {
         
         // if it's 0, save it as nil, otherwise, save in appropriate slot
         calcInput.data[calcInput.Mode.rawValue] = currentInput == 0 ? nil : currentInput
-        print(calcInput.Mode)
-        print(calcInput.data)
     }
     
     func getAndSaveSplitDisplay() {

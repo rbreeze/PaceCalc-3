@@ -130,6 +130,10 @@ class PaceBrain {
         return (resultDistance, resultTime, resultPace, false)
     }
     
+    func getProjection(_ lapDistance: Double, lapTime: Double, projectedDistance: Double) -> String {
+        let projectedDouble = (projectedDistance / lapDistance) * lapTime
+        return timeDecimalToString(projectedDouble / 60)
+    }
     
     func minutesAndSecondsToDouble(_ minutes: Double, seconds: Double) -> Double {
         return minutes + (seconds/60)
