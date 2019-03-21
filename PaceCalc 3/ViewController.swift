@@ -201,7 +201,7 @@ class ViewController: UIViewController {
         case .Pace:
             btnToSend = paceButton
             break
-        case .Time:
+        case .Time, .ProjectedDistance:
             btnToSend = timeButton
             break
         default:
@@ -211,7 +211,9 @@ class ViewController: UIViewController {
         resetSeperatorFont()
         
         btnToSend?.isSelected = false
-        functionTapped(sender: btnToSend!)
+        if (btnToSend != nil) {
+            functionTapped(sender: btnToSend!)
+        }
     
     }
     
@@ -330,6 +332,9 @@ class ViewController: UIViewController {
         }
         
         AudioServicesPlaySystemSound(1104)
+        
+        getAndSaveDisplay()
+        
         isTypingNumber = false
         calcInput.Mode = .LapDistance
         
@@ -346,6 +351,7 @@ class ViewController: UIViewController {
         
         updateUnitLabel()
         updateNumPad()
+        updateDisplay()
         
         return
     }
@@ -503,6 +509,8 @@ class ViewController: UIViewController {
         
         // if it's 0, save it as nil, otherwise, save in appropriate slot
         calcInput.data[calcInput.Mode.rawValue] = currentInput == 0 ? nil : currentInput
+        print(calcInput.Mode)
+        print(calcInput.data)
     }
     
     func getAndSaveSplitDisplay() {
@@ -594,8 +602,15 @@ class ViewController: UIViewController {
         timeLabel.text = alt ? timeLabel.text :  brain.timeDecimalToString((currentDataSet["Time"] ?? 0) ?? 0)
         paceLabel.text =  brain.timeDecimalToString((calcInput.data["Pace"] ?? 0) ?? 0)
         
-        distanceLabel.text = calcInput.Mode == .LapDistance ?
-            "\((currentDataSet["LapDistance"] ?? 0) ?? 0)" : "\((currentDataSet["Distance"] ?? 0) ?? 0)"
+        var distanceText:String
+        if (calcInput.Mode == .LapDistance) {
+            distanceText = "\((currentDataSet["LapDistance"] ?? 0) ?? 0)"
+        } else if (calcInput.Mode == .ProjectedDistance) {
+            distanceText = "\((currentDataSet["ProjectedDistance"] ?? 0) ?? 0)"
+        } else {
+            distanceText = "\((currentDataSet["Distance"] ?? 0) ?? 0)"
+        }
+        distanceLabel.text = distanceText
     }
     
     func updateUnitLabel() {
