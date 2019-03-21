@@ -109,6 +109,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var paceLabel: UILabel!
     
+    @IBOutlet weak var projectedLabel: UILabel!
+    
     @IBOutlet weak var splitModeIndicator: UILabel!
     
     @IBOutlet weak var seperatorButton: BrownCalcButton!
@@ -118,6 +120,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var staticPaceLabel: UILabel!
     
     @IBOutlet weak var staticDistanceLabel: UILabel!
+    
+    @IBOutlet weak var staticProjectedLabel: UILabel!
+    
+    @IBOutlet weak var distanceTypeIndicator: UILabel!
+    
+    @IBOutlet weak var paceTypeIndicator: UILabel!
     
     /* Button Actions */
     
@@ -181,6 +189,12 @@ class ViewController: UIViewController {
         }
         
         alt = !alt
+        distanceTypeIndicator.isHidden = !distanceTypeIndicator.isHidden
+        paceTypeIndicator.isHidden = !paceTypeIndicator.isHidden
+        
+        projectedLabel.isHidden = !projectedLabel.isHidden
+        staticProjectedLabel.isHidden = !staticProjectedLabel.isHidden
+
         sender.backgroundColor = alt ? darkBrown : mainBrown
         
         let titleA = alt ? " LAP DIST" : "SPLIT"
@@ -201,7 +215,7 @@ class ViewController: UIViewController {
         case .Pace:
             btnToSend = paceButton
             break
-        case .Time, .ProjectedDistance:
+        case .Time, .ProjectedDistance, .LapDistance:
             btnToSend = timeButton
             break
         default:
@@ -632,7 +646,7 @@ class ViewController: UIViewController {
             unitText = "MIN / " + label
             break
         case .Timer:
-            unitText = "SEC ELAPSED"
+            unitText = "SEC"
             break
         default:
             unitText = ""
@@ -708,7 +722,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         distanceButton.isSelected = true
         splitModeIndicator.isHidden = true
+        distanceTypeIndicator.isHidden = true
+        paceTypeIndicator.isHidden = true
+        staticProjectedLabel.isHidden = true
+        projectedLabel.isHidden = true
+        
         addBorderRadius(label: splitModeIndicator)
+        addBorderRadius(label: distanceTypeIndicator)
+        addBorderRadius(label: paceTypeIndicator)
         addBorderRadius(label: unitModeLabel)
         
         timer.invalidate()
