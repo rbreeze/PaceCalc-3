@@ -152,6 +152,10 @@ class PaceBrain {
         switch mode {
         case "Pace", "Time":
             return timeDecimalToString(decimal)
+        case "Timer":
+            var precision = Int(round((decimal - floor(decimal)) * 10))
+            precision = precision == 10 ? 0 : precision
+            return timeDecimalToString(decimal/60) + ".\(precision)"
         case "Distance":
             fallthrough
         default:

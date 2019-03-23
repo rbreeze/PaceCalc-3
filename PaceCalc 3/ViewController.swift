@@ -72,6 +72,7 @@ class ViewController: UIViewController {
     var splitMode:Bool = false
     var alt:Bool = false
     var overloaded:Bool = false
+    var adding:Bool = false
     
     var timer = Timer()
     var startTime: Double = 0.00
@@ -115,6 +116,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var seperatorButton: BrownCalcButton!
     
+    @IBOutlet weak var PlusButton: BrownCalcButton!
+    
     @IBOutlet weak var staticTimeLabel: UILabel!
     
     @IBOutlet weak var staticPaceLabel: UILabel!
@@ -133,6 +136,8 @@ class ViewController: UIViewController {
     @IBAction func clearAll(_ sender: AnyObject) {
         AudioServicesPlaySystemSound(1104)
         overloaded = false
+        adding = false
+        PlusButton.setTitle("+", for: [])
         laps = [Double]()
         updateNumPad()
         calculatorDisplay.text = brain.formatDecimal(0, mode: calcInput.Mode.rawValue)
@@ -151,6 +156,7 @@ class ViewController: UIViewController {
         timeLabel.text = "0:00"
         paceLabel.text = "0:00"
         distanceLabel.text = "0.0"
+        projectedLabel.text = "0:00"
         
         timerClear()
     }
@@ -159,6 +165,8 @@ class ViewController: UIViewController {
     @IBAction func clearDisplay(_ sender: AnyObject) {
         AudioServicesPlaySystemSound(1104)
         overloaded = false
+        adding = false
+        PlusButton.setTitle("+", for: [])
         updateNumPad()
         calculatorDisplay.text = brain.formatDecimal(0, mode: calcInput.Mode.rawValue)
         if (splitMode) {
@@ -166,7 +174,7 @@ class ViewController: UIViewController {
             updateSplitDisplay()
         } else {
             calcInput.data[calcInput.Mode.rawValue] = nil
-            modeToLabel(mode: calcInput.Mode).text = brain.formatDecimal(0, mode: calcInput.Mode.rawValue)
+            modeToLabel(mode: calcInput.Mode).text = calcInput.Mode == .Timer ? brain.timeDecimalToString(0) : brain.formatDecimal(0, mode: calcInput.Mode.rawValue)
         }
         
         isTypingNumber = false
@@ -174,14 +182,45 @@ class ViewController: UIViewController {
         timerClear()
     }
     
-    //timer clear function
+    // timer clear function
     func timerClear() {
         timer.invalidate()
         counter = 0
         startTime = 0
         elapsed = 0
     }
-
+    
+    @IBAction func plusTapped(_ sender: UIButton) {
+        if (alt) {
+            return
+        }
+        
+        adding = !adding
+        if (adding) {
+            PlusButton.setTitle("=", for: [])
+            splitMode ? getAndSaveSplitDisplay() : getAndSaveDisplay()
+            calculatorDisplay.text = brain.formatDecimal(0, mode: calcInput.Mode.rawValue)
+            isTypingNumber = false
+        } else {
+            var toBeAdded:Double
+            switch (calcInput.Mode) {
+            case .Time, .Pace :
+                toBeAdded = brain.timeStringtoDouble(calculatorDisplay.text)
+                break;
+            default:
+                toBeAdded = Double(calculatorDisplay.text!) ?? 0
+            }
+            if (!splitMode) {
+                calcInput.data[calcInput.Mode.rawValue]?? += toBeAdded
+            } else {
+                calcInput.splitData[calcInput.Mode.rawValue]?? += toBeAdded
+            }
+            splitMode ? updateSplitDisplay() : updateDisplay()
+            PlusButton.setTitle("+", for: [])
+        }
+    }
+    
+    // alt button action
     @IBAction func altTapped(sender: UIButton) {
         
         if (splitMode && !alt) {
@@ -189,6 +228,11 @@ class ViewController: UIViewController {
         }
         
         alt = !alt
+        if (alt) {
+            PlusButton.setTitleColor(UIColor(red:0.50, green:0.50, blue:0.50, alpha:0.50), for: UIControl.State.normal)
+        } else {
+            PlusButton.setTitleColor(UIColor(red:0.50, green:0.50, blue:0.50, alpha:1.0), for: UIControl.State.normal)
+        }
         distanceTypeIndicator.isHidden = !distanceTypeIndicator.isHidden
         paceTypeIndicator.isHidden = !paceTypeIndicator.isHidden
         
@@ -222,6 +266,8 @@ class ViewController: UIViewController {
             break
         }
         
+        updateDisplay()
+        
         resetSeperatorFont()
         
         btnToSend?.isSelected = false
@@ -238,7 +284,14 @@ class ViewController: UIViewController {
         if (calcInput.Mode == .Timer) {
             let number = Int(sender.titleLabel!.text!)!
             let lapTime = number > 1 ? laps[number-1] - laps[number-2] : laps[number-1]
-            calculatorDisplay.text = String(format: "%.2f", lapTime)
+            projectedLabel.text = brain.getProjection(calcInput.data["LapDistance"]! ?? 0.0, lapTime: lapTime, projectedDistance: calcInput.data["ProjectedDistance"]! ?? 0.0)
+            let pace = brain.findMissing(distance: calcInput.data["LapDistance"] ?? 0, time: lapTime / 60, pace: nil, mode: "Pace").pace
+            paceLabel.text = brain.timeDecimalToString(pace ?? 0)
+            
+            var precision = Int(round((lapTime - floor(lapTime)) * 10))
+            precision = precision == 10 ? 0 : precision
+            let timerText = brain.timeDecimalToString(lapTime / 60)
+            calculatorDisplay.text = timerText + ".\(precision)"
             unitLabel.text = "LAP \(number)"
             return
         }
@@ -250,7 +303,9 @@ class ViewController: UIViewController {
             calculatorDisplay.text = number!
             isTypingNumber = true
         }
-        modeToLabel(mode: calcInput.Mode).text = calculatorDisplay.text
+        if (!adding) {
+            modeToLabel(mode: calcInput.Mode).text = calculatorDisplay.text
+        }
         overloaded = calculatorDisplay.text!.characters.count >= 6 ? true : false
         updateNumPad()
     }
@@ -268,7 +323,9 @@ class ViewController: UIViewController {
             calculatorDisplay.text = seperator!
             isTypingNumber = true
         }
-        modeToLabel(mode: calcInput.Mode).text = calculatorDisplay.text
+        if (!adding) {
+            modeToLabel(mode: calcInput.Mode).text = calculatorDisplay.text
+        }
         overloaded = calculatorDisplay.text!.characters.count >= 6 ? true : false
         updateNumPad()
     }
@@ -277,9 +334,12 @@ class ViewController: UIViewController {
     @objc func timerAction() {
         counter = Date().timeIntervalSinceReferenceDate - startTime
         
-        let timerText = formatter.string(from: NSNumber(value: counter))
+        var precision = Int(round((counter - floor(counter)) * 10))
+        precision = precision == 10 ? 0 : precision
         
-        calculatorDisplay.text = timerText
+        let timerText = brain.timeDecimalToString(counter / 60)
+        
+        calculatorDisplay.text = timerText + ".\(precision)"
         timeLabel.text = timerText
     }
     
@@ -295,8 +355,10 @@ class ViewController: UIViewController {
             } else {
                 lapTime = counter
             }
-            print(lapTime)
-            projectedLabel.text = brain.getProjection(calcInput.data["LapDistance"] as! Double, lapTime: lapTime, projectedDistance: calcInput.data["ProjectedDistance"] as! Double)
+            
+            projectedLabel.text = brain.getProjection(calcInput.data["LapDistance"]! ?? 0.0, lapTime: lapTime, projectedDistance: calcInput.data["ProjectedDistance"]! ?? 0.0)
+            let pace = brain.findMissing(distance: calcInput.data["LapDistance"] ?? 0, time: lapTime / 60, pace: nil, mode: "Pace").pace
+            paceLabel.text = brain.timeDecimalToString(pace ?? 0)
             updateNumLaps()
             return
         }
@@ -312,6 +374,8 @@ class ViewController: UIViewController {
         }
         
         AudioServicesPlaySystemSound(1104)
+        
+        isTypingNumber = false
 
         splitModeIndicator.isHidden = !splitModeIndicator.isHidden
         splitMode = !splitMode
@@ -358,7 +422,12 @@ class ViewController: UIViewController {
         getAndSaveDisplay()
         
         isTypingNumber = false
+        if (adding) {
+            plusTapped(sender)
+        }
         calcInput.Mode = .LapDistance
+        
+        distanceTypeIndicator.text = "LAP"
         
         resetSeperatorFont()
         seperatorButton.setTitle(".", for: [])
@@ -384,6 +453,9 @@ class ViewController: UIViewController {
             AudioServicesPlaySystemSound(1104)
             
             isTypingNumber = false
+            if (adding) {
+                plusTapped(sender)
+            }
             
             if (splitMode && calcInput.Mode == .Distance) {
                 calcInput.splitData["Distance"] = Double(calculatorDisplay.text!) ?? 0
@@ -409,6 +481,7 @@ class ViewController: UIViewController {
                     resetSeperatorFont()
                     calcInput.Mode = inputMode.ProjectedDistance
                     seperatorButton.setTitle(".", for: [])
+                    distanceTypeIndicator.text = "PROJ"
                     paceButton.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5), for: UIControl.State.normal)
                 } else {
                     calcInput.Mode = inputMode.Time
@@ -419,6 +492,7 @@ class ViewController: UIViewController {
             case distanceButton:
                 if (alt) {
                     calcInput.Mode = inputMode.Timer
+                    distanceTypeIndicator.text = "PROJ"
                     seperatorButton.setTitle("", for: [])
                     seperatorButton.titleLabel?.font = UIFont.systemFont(ofSize: 25.0)
                     seperatorButton.setTitle("LAP", for: [])
@@ -441,6 +515,7 @@ class ViewController: UIViewController {
                         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(ViewController.timerAction), userInfo: nil, repeats: true)
                     } else { // if timer was just stopped
                         elapsed = Date().timeIntervalSinceReferenceDate - startTime
+                        getAndSaveDisplay()
                         timer.invalidate()
                     }
                 } else {
@@ -469,7 +544,7 @@ class ViewController: UIViewController {
             }
             
             // style and select the button that the user selected
-            if (alt && sender == paceButton) {
+            if (alt && sender == paceButton) { // if in timer mode and you start the timer
                 distanceButton.isSelected = true
                 distanceButton.backgroundColor = darkPink
             } else {
@@ -497,20 +572,32 @@ class ViewController: UIViewController {
         let currentDistance = calcInput.data["Distance"] ?? nil
         let currentPace = calcInput.data["Pace"] ?? nil
         let currentSplitDistance = calcInput.splitData["Distance"] ?? nil
+        let currentProjectedDistance = calcInput.data["ProjectedDistance"] ?? nil
+        let currentLapDistance = calcInput.data["LapDistance"] ?? nil
         
         if (currentDistance != nil) {
             let convertedDistance = brain.convert(currentDistance!, fromUnit: originalUnit.rawValue, toUnit: calcUnitMode.rawValue) ?? 0
             calcInput.data["Distance"] = brain.roundToHundredths(convertedDistance)
         }
         
-        if (currentPace != nil){
+        if (currentPace != nil) {
             let convertedPace = brain.convert(1 / currentPace!, fromUnit: originalUnit.rawValue, toUnit: calcUnitMode.rawValue) ?? 0
             calcInput.data["Pace"] = brain.roundToHundredths(1 / convertedPace)
         }
         
-        if (currentSplitDistance != nil){
+        if (currentSplitDistance != nil) {
             let convertedSplitDistance = brain.convert(currentSplitDistance!, fromUnit: originalUnit.rawValue, toUnit: calcUnitMode.rawValue) ?? 0
             calcInput.splitData["Distance"] = brain.roundToHundredths(convertedSplitDistance)
+        }
+        
+        if (currentProjectedDistance != nil) {
+            let convertedProjectedDistance = brain.convert(currentProjectedDistance!, fromUnit: originalUnit.rawValue, toUnit: calcUnitMode.rawValue) ?? 0
+            calcInput.data["ProjectedDistance"] = brain.roundToHundredths(convertedProjectedDistance)
+        }
+        
+        if (currentLapDistance != nil) {
+            let convertedLapDistance = brain.convert(currentLapDistance!, fromUnit: originalUnit.rawValue, toUnit: calcUnitMode.rawValue) ?? 0
+            calcInput.data["LapDistance"] = brain.roundToHundredths(convertedLapDistance)
         }
         
         updateData()
@@ -525,6 +612,8 @@ class ViewController: UIViewController {
         // convert the input on the calculator's display to a double
         if (calcInput.Mode == inputMode.Pace || calcInput.Mode == inputMode.Time) {
             currentInput = brain.timeStringtoDouble(calculatorDisplay.text)
+        } else if (calcInput.Mode == .Timer) {
+            currentInput = elapsed
         } else {
             currentInput = Double(calculatorDisplay.text!) ?? 0
         }
@@ -539,6 +628,8 @@ class ViewController: UIViewController {
             currentInput = Double(calculatorDisplay.text!) ?? 0
         } else if (calcInput.Mode == .Time) {
             currentInput = brain.timeStringtoDouble(calculatorDisplay.text)
+        } else if (calcInput.Mode == .Timer) {
+            currentInput = elapsed;
         }
         
         if (currentInput == 0) {
@@ -556,7 +647,7 @@ class ViewController: UIViewController {
     }
     
     func updateNumPad() {
-        // deactivate and style numpad buttons if in Time mode and Split mode
+        // deactivate and style numpad buttons if in Time mode and Split mode, or if overloaded, or if in Timer mode
         let currentNumPadColor = (splitMode && calcInput.Mode == .Time) || overloaded || calcInput.Mode == .Timer ? UIColor(red:0.24, green:0.24, blue:0.24, alpha:0.5) : numPadGrey
         
         let numPadState = (splitMode && calcInput.Mode == .Time) || overloaded || calcInput.Mode == .Timer ? false : true
@@ -597,6 +688,7 @@ class ViewController: UIViewController {
             calcInput.data["Time"] = calculatedResults.time
             calcInput.data["Pace"] = calculatedResults.pace
         }
+        
         updateSplitTime()
     }
     
@@ -610,6 +702,7 @@ class ViewController: UIViewController {
         
         // get the new current value to display on screen
         let currentValue = (calcInput.data[calcInput.Mode.rawValue] ?? 0) ?? 0
+        
         calculatorDisplay.text = brain.formatDecimal(currentValue, mode: calcInput.Mode.rawValue)
         
         updateUnitLabel()
@@ -619,17 +712,18 @@ class ViewController: UIViewController {
     func updateSmallLabels() {
         // update small labels
         let currentDataSet = splitMode ? calcInput.splitData : calcInput.data
-        timeLabel.text = alt ? timeLabel.text :  brain.timeDecimalToString((currentDataSet["Time"] ?? 0) ?? 0)
-        paceLabel.text =  brain.timeDecimalToString((calcInput.data["Pace"] ?? 0) ?? 0)
+        timeLabel.text = alt ? brain.timeDecimalToString(elapsed / 60) :  brain.timeDecimalToString((currentDataSet["Time"] ?? 0) ?? 0)
+        paceLabel.text =  alt ? "0:00" : brain.timeDecimalToString((calcInput.data["Pace"] ?? 0) ?? 0)
         
         var distanceText:String
         if (calcInput.Mode == .LapDistance) {
             distanceText = "\((currentDataSet["LapDistance"] ?? 0) ?? 0)"
-        } else if (calcInput.Mode == .ProjectedDistance) {
+        } else if (calcInput.Mode == .ProjectedDistance || calcInput.Mode == .Timer) {
             distanceText = "\((currentDataSet["ProjectedDistance"] ?? 0) ?? 0)"
         } else {
             distanceText = "\((currentDataSet["Distance"] ?? 0) ?? 0)"
         }
+        
         distanceLabel.text = distanceText
     }
     
@@ -687,7 +781,7 @@ class ViewController: UIViewController {
             return distanceLabel
         case .Pace:
             return paceLabel
-        case .Time:
+        case .Time, .Timer:
             return timeLabel
         case .ProjectedDistance:
             return distanceLabel
