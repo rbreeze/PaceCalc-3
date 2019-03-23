@@ -41,17 +41,17 @@
 
 /* Begin PBXFileReference section */
 		C0204D5B1FAFACC800C20307 /* CalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButton.swift; sourceTree = "<group>"; };
-		C0255FF71FABD2D300539BF0 /* PaceCalc 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PaceCalc 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0255FF71FABD2D300539BF0 /* RunCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0255FFA1FABD2D300539BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0255FFC1FABD2D300539BF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C0255FFF1FABD2D300539BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C02560011FABD2D300539BF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C02560041FABD2D300539BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C02560061FABD2D300539BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C025600B1FABD2D400539BF0 /* PaceCalc 3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PaceCalc 3Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C025600B1FABD2D400539BF0 /* RunCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C025600F1FABD2D400539BF0 /* PaceCalc_3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceCalc_3Tests.swift; sourceTree = "<group>"; };
 		C02560111FABD2D400539BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C02560161FABD2D400539BF0 /* PaceCalc 3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PaceCalc 3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C02560161FABD2D400539BF0 /* RunCalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunCalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C025601A1FABD2D400539BF0 /* PaceCalc_3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceCalc_3UITests.swift; sourceTree = "<group>"; };
 		C025601C1FABD2D400539BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C02560281FABD93C00539BF0 /* PinkCalcButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinkCalcButton.swift; sourceTree = "<group>"; };
@@ -89,9 +89,9 @@
 		C0255FEE1FABD2D300539BF0 = {
 			isa = PBXGroup;
 			children = (
-				C0255FF91FABD2D300539BF0 /* PaceCalc 3 */,
-				C025600E1FABD2D400539BF0 /* PaceCalc 3Tests */,
-				C02560191FABD2D400539BF0 /* PaceCalc 3UITests */,
+				C0255FF91FABD2D300539BF0 /* RunCalc */,
+				C025600E1FABD2D400539BF0 /* RunCalcTests */,
+				C02560191FABD2D400539BF0 /* RunCalcUITests */,
 				C0255FF81FABD2D300539BF0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,14 +99,14 @@
 		C0255FF81FABD2D300539BF0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C0255FF71FABD2D300539BF0 /* PaceCalc 3.app */,
-				C025600B1FABD2D400539BF0 /* PaceCalc 3Tests.xctest */,
-				C02560161FABD2D400539BF0 /* PaceCalc 3UITests.xctest */,
+				C0255FF71FABD2D300539BF0 /* RunCalc.app */,
+				C025600B1FABD2D400539BF0 /* RunCalcTests.xctest */,
+				C02560161FABD2D400539BF0 /* RunCalcUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C0255FF91FABD2D300539BF0 /* PaceCalc 3 */ = {
+		C0255FF91FABD2D300539BF0 /* RunCalc */ = {
 			isa = PBXGroup;
 			children = (
 				C0255FFA1FABD2D300539BF0 /* AppDelegate.swift */,
@@ -122,33 +122,33 @@
 				C02560031FABD2D300539BF0 /* LaunchScreen.storyboard */,
 				C02560061FABD2D300539BF0 /* Info.plist */,
 			);
-			path = "PaceCalc 3";
+			path = RunCalc;
 			sourceTree = "<group>";
 		};
-		C025600E1FABD2D400539BF0 /* PaceCalc 3Tests */ = {
+		C025600E1FABD2D400539BF0 /* RunCalcTests */ = {
 			isa = PBXGroup;
 			children = (
 				C025600F1FABD2D400539BF0 /* PaceCalc_3Tests.swift */,
 				C02560111FABD2D400539BF0 /* Info.plist */,
 			);
-			path = "PaceCalc 3Tests";
+			path = RunCalcTests;
 			sourceTree = "<group>";
 		};
-		C02560191FABD2D400539BF0 /* PaceCalc 3UITests */ = {
+		C02560191FABD2D400539BF0 /* RunCalcUITests */ = {
 			isa = PBXGroup;
 			children = (
 				C025601A1FABD2D400539BF0 /* PaceCalc_3UITests.swift */,
 				C025601C1FABD2D400539BF0 /* Info.plist */,
 			);
-			path = "PaceCalc 3UITests";
+			path = RunCalcUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C0255FF61FABD2D300539BF0 /* PaceCalc 3 */ = {
+		C0255FF61FABD2D300539BF0 /* RunCalc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C025601F1FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "PaceCalc 3" */;
+			buildConfigurationList = C025601F1FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "RunCalc" */;
 			buildPhases = (
 				C0255FF31FABD2D300539BF0 /* Sources */,
 				C0255FF41FABD2D300539BF0 /* Frameworks */,
@@ -158,14 +158,14 @@
 			);
 			dependencies = (
 			);
-			name = "PaceCalc 3";
+			name = RunCalc;
 			productName = "PaceCalc 3";
-			productReference = C0255FF71FABD2D300539BF0 /* PaceCalc 3.app */;
+			productReference = C0255FF71FABD2D300539BF0 /* RunCalc.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C025600A1FABD2D400539BF0 /* PaceCalc 3Tests */ = {
+		C025600A1FABD2D400539BF0 /* RunCalcTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C02560221FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "PaceCalc 3Tests" */;
+			buildConfigurationList = C02560221FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "RunCalcTests" */;
 			buildPhases = (
 				C02560071FABD2D400539BF0 /* Sources */,
 				C02560081FABD2D400539BF0 /* Frameworks */,
@@ -176,14 +176,14 @@
 			dependencies = (
 				C025600D1FABD2D400539BF0 /* PBXTargetDependency */,
 			);
-			name = "PaceCalc 3Tests";
+			name = RunCalcTests;
 			productName = "PaceCalc 3Tests";
-			productReference = C025600B1FABD2D400539BF0 /* PaceCalc 3Tests.xctest */;
+			productReference = C025600B1FABD2D400539BF0 /* RunCalcTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C02560151FABD2D400539BF0 /* PaceCalc 3UITests */ = {
+		C02560151FABD2D400539BF0 /* RunCalcUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C02560251FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "PaceCalc 3UITests" */;
+			buildConfigurationList = C02560251FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "RunCalcUITests" */;
 			buildPhases = (
 				C02560121FABD2D400539BF0 /* Sources */,
 				C02560131FABD2D400539BF0 /* Frameworks */,
@@ -194,9 +194,9 @@
 			dependencies = (
 				C02560181FABD2D400539BF0 /* PBXTargetDependency */,
 			);
-			name = "PaceCalc 3UITests";
+			name = RunCalcUITests;
 			productName = "PaceCalc 3UITests";
-			productReference = C02560161FABD2D400539BF0 /* PaceCalc 3UITests.xctest */;
+			productReference = C02560161FABD2D400539BF0 /* RunCalcUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -229,7 +229,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C0255FF21FABD2D300539BF0 /* Build configuration list for PBXProject "PaceCalc 3" */;
+			buildConfigurationList = C0255FF21FABD2D300539BF0 /* Build configuration list for PBXProject "RunCalc" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -243,9 +243,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C0255FF61FABD2D300539BF0 /* PaceCalc 3 */,
-				C025600A1FABD2D400539BF0 /* PaceCalc 3Tests */,
-				C02560151FABD2D400539BF0 /* PaceCalc 3UITests */,
+				C0255FF61FABD2D300539BF0 /* RunCalc */,
+				C025600A1FABD2D400539BF0 /* RunCalcTests */,
+				C02560151FABD2D400539BF0 /* RunCalcUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -314,12 +314,12 @@
 /* Begin PBXTargetDependency section */
 		C025600D1FABD2D400539BF0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C0255FF61FABD2D300539BF0 /* PaceCalc 3 */;
+			target = C0255FF61FABD2D300539BF0 /* RunCalc */;
 			targetProxy = C025600C1FABD2D400539BF0 /* PBXContainerItemProxy */;
 		};
 		C02560181FABD2D400539BF0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C0255FF61FABD2D300539BF0 /* PaceCalc 3 */;
+			target = C0255FF61FABD2D300539BF0 /* RunCalc */;
 			targetProxy = C02560171FABD2D400539BF0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -476,7 +476,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "remington.breeze.apps.PaceCalc-3Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaceCalc 3.app/PaceCalc 3";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RunCalc.app/RunCalc";
 			};
 			name = Debug;
 		};
@@ -491,7 +491,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "remington.breeze.apps.PaceCalc-3Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaceCalc 3.app/PaceCalc 3";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RunCalc.app/RunCalc";
 			};
 			name = Release;
 		};
@@ -526,7 +526,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C0255FF21FABD2D300539BF0 /* Build configuration list for PBXProject "PaceCalc 3" */ = {
+		C0255FF21FABD2D300539BF0 /* Build configuration list for PBXProject "RunCalc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C025601D1FABD2D400539BF0 /* Debug */,
@@ -535,7 +535,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C025601F1FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "PaceCalc 3" */ = {
+		C025601F1FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "RunCalc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C02560201FABD2D400539BF0 /* Debug */,
@@ -544,7 +544,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C02560221FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "PaceCalc 3Tests" */ = {
+		C02560221FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "RunCalcTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C02560231FABD2D400539BF0 /* Debug */,
@@ -553,7 +553,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C02560251FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "PaceCalc 3UITests" */ = {
+		C02560251FABD2D400539BF0 /* Build configuration list for PBXNativeTarget "RunCalcUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C02560261FABD2D400539BF0 /* Debug */,
