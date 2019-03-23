@@ -184,6 +184,9 @@ class ViewController: UIViewController {
     
     // timer clear function
     func timerClear() {
+        if (counting) {
+            functionTapped(sender: paceButton)
+        }
         timer.invalidate()
         counter = 0
         startTime = 0
@@ -340,7 +343,8 @@ class ViewController: UIViewController {
         let timerText = brain.timeDecimalToString(counter / 60)
         
         calculatorDisplay.text = timerText + ".\(precision)"
-        timeLabel.text = timerText
+        let currentLap = laps.count > 0 ? counter - laps[laps.count - 1] : counter
+        timeLabel.text = brain.timeDecimalToString(currentLap / 60)
     }
     
     //lap function
